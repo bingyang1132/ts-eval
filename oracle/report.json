@@ -1,0 +1,165 @@
+{
+ "files": [
+  "positions/round1b_shard0.npz",
+  "positions/round1b_shard1.npz",
+  "positions/round1b_shard2.npz",
+  "positions/round1b_shard3.npz",
+  "positions/round1b_shard4.npz",
+  "positions/round1b_shard5.npz",
+  "positions/round1b_shard6.npz",
+  "positions/round1b_shard7.npz",
+  "positions/round1b_shard8.npz",
+  "positions/round1b_shard9.npz",
+  "positions/round2_shard0.npz"
+ ],
+ "positions": 2824738,
+ "held_out": 278520,
+ "epochs": [
+  {
+   "n": 278520,
+   "logloss": 0.5826,
+   "brier": 0.1986,
+   "auc": 0.7611,
+   "base_rate": 0.5,
+   "train_logloss": 0.5843,
+   "epoch": 1
+  },
+  {
+   "n": 278520,
+   "logloss": 0.6051,
+   "brier": 0.2025,
+   "auc": 0.7545,
+   "base_rate": 0.5,
+   "train_logloss": 0.5407,
+   "epoch": 2
+  },
+  {
+   "n": 278520,
+   "logloss": 0.6282,
+   "brier": 0.2051,
+   "auc": 0.7511,
+   "base_rate": 0.5,
+   "train_logloss": 0.4986,
+   "epoch": 3
+  }
+ ],
+ "best_logloss": 0.5826,
+ "by": {
+  "turn1-2": {
+   "n": 126544,
+   "logloss": 0.6202,
+   "brier": 0.2155,
+   "auc": 0.7155,
+   "base_rate": 0.5
+  },
+  "turn3-4": {
+   "n": 75716,
+   "logloss": 0.5523,
+   "brier": 0.1862,
+   "auc": 0.792,
+   "base_rate": 0.5
+  },
+  "turn5-6": {
+   "n": 45800,
+   "logloss": 0.5523,
+   "brier": 0.1844,
+   "auc": 0.7943,
+   "base_rate": 0.5
+  },
+  "turn7-10": {
+   "n": 30460,
+   "logloss": 0.5474,
+   "brier": 0.1806,
+   "auc": 0.8018,
+   "base_rate": 0.5
+  },
+  "terminal": {
+   "n": 0,
+   "logloss": NaN,
+   "brier": NaN,
+   "auc": NaN,
+   "base_rate": NaN
+  },
+  "non_terminal": {
+   "n": 278520,
+   "logloss": 0.5826,
+   "brier": 0.1986,
+   "auc": 0.7611,
+   "base_rate": 0.5
+  }
+ },
+ "calibration_nonterminal": [
+  [
+   0.0,
+   11749,
+   0.059,
+   0.084
+  ],
+  [
+   0.1,
+   17685,
+   0.151,
+   0.161
+  ],
+  [
+   0.2,
+   21165,
+   0.252,
+   0.227
+  ],
+  [
+   0.3,
+   28347,
+   0.353,
+   0.311
+  ],
+  [
+   0.4,
+   48906,
+   0.456,
+   0.418
+  ],
+  [
+   0.5,
+   60997,
+   0.546,
+   0.54
+  ],
+  [
+   0.6,
+   35550,
+   0.646,
+   0.666
+  ],
+  [
+   0.7,
+   24276,
+   0.748,
+   0.764
+  ],
+  [
+   0.8,
+   18318,
+   0.848,
+   0.849
+  ],
+  [
+   0.9,
+   11527,
+   0.94,
+   0.92
+  ]
+ ],
+ "minutes": 3.3,
+ "model": {
+  "dim": 3081,
+  "features": "all",
+  "aux_used": false,
+  "terminal_kept": false,
+  "hidden": 512,
+  "depth": 2,
+  "dropout": 0.3,
+  "wd": 0.001,
+  "games": 109040
+ }
+}

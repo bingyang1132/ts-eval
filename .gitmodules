@@ -1,0 +1,6 @@
+[submodule "ts-env"]
+	path = third_party/ts-env
+	url = https://github.com/bingyang1132/ts-env.git
+[submodule "ts-env-legacy"]
+	path = third_party/ts-env-legacy
+	url = https://github.com/bingyang1132/ts-env.git

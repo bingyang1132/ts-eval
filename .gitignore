@@ -1,0 +1,9 @@
+# run outputs and training products never go in this repo
+results/
+*.log
+checkpoints/
+records/
+positions/
+__pycache__/
+*.pyc
+.venv/

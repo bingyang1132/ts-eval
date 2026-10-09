@@ -1,0 +1,12 @@
+# Core. The game engine is not installed from here: ts-env is referenced as two git submodules
+# (third_party/ts-env at the games commit 6791b34, third_party/ts-env-legacy at the data commit 515622c;
+# clone with --recursive or run `git submodule update --init`), and oracle/tsenv.py puts the right one on
+# sys.path for each script. The engine itself only needs numpy (Python >= 3.11).
+numpy>=1.24
+
+# Oracle (oracle/*.py, eval/play_vs_greedy.py --opponent value*): torch (CPU is enough).
+#   torch>=2.4
+# Leaderboard rows (eval/run_zero_shot.sh): verifiers + datasets.
+#   verifiers>=0.3.1
+#   datasets
+# Training (training/*.py): see training/README.md for the exact versions used.
