@@ -8,7 +8,7 @@ network (`oracle/value.pt`). Field definitions are in [`SCHEMA.md`](SCHEMA.md).
 | **`oracle_heldout_value_r2_public.jsonl`** | 847 | 58 | 5 | **public oracle** (below) | 11.0 MB | yes (**the leaderboard split**) | `7d21290f5d28e722bb92df760c75d02eebad432cd6a6bbd2ff1bb346a2e37d8a` |
 | `oracle_heldout_value_r2_legacy.jsonl` | 847 | 58 | 5 | legacy (below) | 10.6 MB | yes (the held-out file under the training-label definition; the training curves of `training/README.md` were measured on it) | `08548a3994628604e002b113ad169599586e9e73844e9838871c629b0eaf1f39` |
 | `oracle_train_value_r2.jsonl` | 3,292 | 233 | 5 | legacy | 41.0 MB | yes | `1656027a8294d7c70e589e3444a1e988292c7662cd41321a6964fcb198c715fd` |
-| `oracle_train_value_r2_big.jsonl` | 47,894 | 2,400 | 12 | legacy | 570.3 MB | no: release download | `2116127e0a4bed899511ce22f4c8bd6f4e4b3c34e075703105e0638b4ceb8f84` |
+| `oracle_train_value_r2_big.jsonl` | 47,894 | 2,400 | 12 | legacy | 570.3 MB | no: release `v0.1` download | `2116127e0a4bed899511ce22f4c8bd6f4e4b3c34e075703105e0638b4ceb8f84` |
 
 Same V, two label definitions (`oracle/README.md`, "Caveats"):
 
@@ -63,17 +63,14 @@ are the reference labels and scores are always computed against them. The public
 
 ## The big train set
 
-`oracle_train_value_r2_big.jsonl` is over GitHub's file-size limit, so it is attached to a GitHub release of
-this repo instead of being committed:
+`oracle_train_value_r2_big.jsonl` is over GitHub's file-size limit, so it is attached to the GitHub release
+[`v0.1`](https://github.com/bingyang1132/ts-eval/releases/tag/v0.1) of this repo instead of being committed:
 
 ```bash
-# from the ts-eval root, once the release is published
-gh release download --repo bingyang1132/ts-eval --pattern 'oracle_train_value_r2_big.jsonl*' --dir data
-# or: curl -L -o data/oracle_train_value_r2_big.jsonl https://github.com/bingyang1132/ts-eval/releases/download/<tag>/oracle_train_value_r2_big.jsonl
-# (if the asset is gzipped: gunzip data/oracle_train_value_r2_big.jsonl.gz)
+# from the ts-eval root
+curl -L -o data/oracle_train_value_r2_big.jsonl https://github.com/bingyang1132/ts-eval/releases/download/v0.1/oracle_train_value_r2_big.jsonl
+# or: gh release download v0.1 --repo bingyang1132/ts-eval --pattern 'oracle_train_value_r2_big.jsonl' --dir data
 echo "2116127e0a4bed899511ce22f4c8bd6f4e4b3c34e075703105e0638b4ceb8f84  data/oracle_train_value_r2_big.jsonl" | sha256sum -c
 ```
 
 It is only needed for the large-data training recipe (`training/README.md`); evaluation uses the held-out file.
-
-Release status: the release has not been published yet.
